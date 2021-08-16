@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": "../lib",
+    "outDir": "../../dist",
+    "target": "es6",
+    "jsx": "react",
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "strictPropertyInitialization": false
+  },
+  
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
