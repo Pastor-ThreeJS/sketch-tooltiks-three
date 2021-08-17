@@ -1,6 +1,6 @@
 {
   "name": "sketch-tooltiks",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Mini and powerful canvas engine tooltiks for creating App or Game.",
   "author": "lustianshun@gmail.com",
   "license": "ISC",
@@ -13,8 +13,7 @@
     "type": "git",
     "url": "git@github.com:Lustianshun/ThreeJS-Tootiks.git"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^24.0.25",
     "@types/react-dom": "^16.9.5",
