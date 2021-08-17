@@ -1,14 +1,20 @@
 {
-  "name": "lts-sketch-tooltiks",
+  "name": "sketch-tooltiks",
   "version": "0.0.0",
-  "repository": "git@github.com:Lustianshun/ThreeJS-Tootiks.git",
+  "description": "Mini and powerful canvas engine tooltiks for creating App or Game.",
   "author": "lustianshun@gmail.com",
+  "license": "ISC",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Lustianshun/ThreeJS-Tootiks.git"
+  },
+  "dependencies": {
+  },
   "devDependencies": {
     "@types/jest": "^24.0.25",
     "@types/react-dom": "^16.9.5",
