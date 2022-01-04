@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import * as Utility from '../Utility';
 
-export class Size extends Utility.Eventemitter {
+export default class Size extends Utility.Eventemitter {
 
     public width: number = 0;
     public height: number = 0;

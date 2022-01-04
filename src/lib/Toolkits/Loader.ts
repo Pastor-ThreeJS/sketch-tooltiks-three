@@ -6,7 +6,7 @@ import { DDSLoader } from "three/examples/jsm/loaders/DDSLoader";
 import { FileLoader, TextureLoader, Texture } from 'three';
 import * as Utility from '../Utility';
 
-export class Loader extends Utility.Eventemitter {
+export default class Loader extends Utility.Eventemitter {
     constructor() {
         super()
         this.setLoaders()

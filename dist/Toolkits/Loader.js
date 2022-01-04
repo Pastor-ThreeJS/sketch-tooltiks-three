@@ -19,7 +19,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Loader = void 0;
 const GLTFLoader_js_1 = require("three/examples/jsm/loaders/GLTFLoader.js");
 const FBXLoader_js_1 = require("three/examples/jsm/loaders/FBXLoader.js");
 const EXRLoader_1 = require("three/examples/jsm/loaders/EXRLoader");
@@ -152,4 +151,4 @@ class Loader extends Utility.Eventemitter {
         }
     }
 }
-exports.Loader = Loader;
+exports.default = Loader;

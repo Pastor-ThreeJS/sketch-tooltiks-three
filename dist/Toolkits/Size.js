@@ -19,7 +19,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Size = void 0;
 const Utility = __importStar(require("../Utility"));
 class Size extends Utility.Eventemitter {
     constructor(canvas, renderer) {
@@ -50,4 +49,4 @@ class Size extends Utility.Eventemitter {
         window.removeEventListener("resize", this.resize.bind(this));
     }
 }
-exports.Size = Size;
+exports.default = Size;

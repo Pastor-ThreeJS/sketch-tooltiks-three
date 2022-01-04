@@ -1,3 +1,3 @@
-export { default as Loader } from "./Toolkits/Loader"
-export { default as Size } from "./Toolkits/Size"
-export { default as Utility } from "./Toolkits/Utility"
+export { default as Loader } from "./Loader"
+export { default as Size } from "./Size"
+export { default as Utility } from "./Utility"

@@ -1,5 +1,5 @@
 import * as Utility from '../Utility';
-export declare class Loader extends Utility.Eventemitter {
+export default class Loader extends Utility.Eventemitter {
     constructor();
     private loaders;
     private toLoad;
