@@ -4,5 +4,3 @@ var Loader_1 = require("./Loader");
 Object.defineProperty(exports, "Loader", { enumerable: true, get: function () { return Loader_1.default; } });
 var Size_1 = require("./Size");
 Object.defineProperty(exports, "Size", { enumerable: true, get: function () { return Size_1.default; } });
-var Utility_1 = require("./Utility");
-Object.defineProperty(exports, "Utility", { enumerable: true, get: function () { return Utility_1.default; } });
