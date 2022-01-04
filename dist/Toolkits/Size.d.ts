@@ -6,7 +6,7 @@ export default class Size extends Utility.Eventemitter {
     aspect: number;
     viewportwidth: number;
     viewportheight: number;
-    constructor(canvas: HTMLElement, renderer: THREE.Renderer);
+    constructor(canvas: HTMLElement, renderer: THREE.WebGLRenderer);
     private canvas;
     private renderer;
     private resize;

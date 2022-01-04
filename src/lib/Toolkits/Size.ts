@@ -9,7 +9,7 @@ export default class Size extends Utility.Eventemitter {
     public viewportwidth: number = 0;
     public viewportheight: number = 0;
 
-    constructor(canvas: HTMLElement, renderer: THREE.Renderer) {
+    constructor(canvas: HTMLElement, renderer: THREE.WebGLRenderer) {
         super();
 
         this.renderer = renderer;
@@ -20,7 +20,7 @@ export default class Size extends Utility.Eventemitter {
     }
 
     private canvas: HTMLElement
-    private renderer: THREE.Renderer;
+    private renderer: THREE.WebGLRenderer;
 
     private resize() {
         // this.width = this.canvas.offsetWidth;

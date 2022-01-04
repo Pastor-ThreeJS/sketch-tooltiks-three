@@ -19,7 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.InRect = exports.GetCurrentTime = exports.WordPosToScreen = exports.SetModelPosition = void 0;
+exports.GetYAsixAngle = exports.InRect = exports.GetCurrentTime = exports.WordPosToScreen = exports.SetModelPosition = void 0;
 const THREE = __importStar(require("three"));
 /**设置加载模型居中 */
 exports.SetModelPosition = (object) => {
@@ -72,4 +72,26 @@ exports.InRect = (pos, rect) => {
     if (pos.y > (rect.top + rect.height))
         return false;
     return true;
+};
+/**计算Y夹角
+ * @param curent 当前点位
+ * @param target 目标点位
+ */
+exports.GetYAsixAngle = (curent, target) => {
+    //X轴
+    const xAsix = new THREE.Vector3(1, 0, 0);
+    //当前点世界坐标
+    let curentWorldPosition = curent.getWorldPosition(new THREE.Vector3(0, 0, 0)).clone();
+    //目标点世界坐标
+    let targetWorldPosition = target.getWorldPosition(new THREE.Vector3(0, 0, 0)).clone();
+    //目标朝向
+    let direction = targetWorldPosition.sub(curentWorldPosition).normalize();
+    //计算当前方向和X轴夹角
+    let angle = Math.acos(direction.dot(xAsix));
+    //根据Cross运算判定夹角是锐角或钝角
+    let y = direction.cross(new THREE.Vector3(1, 0, 0)).y;
+    if (y > 0) {
+        angle = Math.PI + angle;
+    }
+    return angle;
 };

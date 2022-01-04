@@ -18,3 +18,8 @@ export declare var InRect: (pos: {
     width: number;
     height: number;
 }) => Boolean;
+/**计算Y夹角
+ * @param curent 当前点位
+ * @param target 目标点位
+ */
+export declare var GetYAsixAngle: (curent: THREE.Object3D, target: THREE.Object3D) => number;
