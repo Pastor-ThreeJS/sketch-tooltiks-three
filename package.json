@@ -1,6 +1,6 @@
 {
   "name": "sketch-tooltiks",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Mini and powerful canvas engine tooltiks for creating App or Game.",
   "author": "lustianshun@gmail.com",
   "license": "ISC",
@@ -11,10 +11,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:Lustianshun/sketch-tooltiks.git"
+    "url": "git@github.com:Pastor-ThreeJS/sketch-tooltiks.git"
   },
   "dependencies": {},
   "devDependencies": {
+    "@types/three": "^0.136.0",
+    "three": "^0.136.0",
     "gulp": "^4.0.2",
     "gulp-bump": "^3.2.0",
     "@types/jest": "^24.0.25",
