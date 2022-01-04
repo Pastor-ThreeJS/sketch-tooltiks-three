@@ -21,6 +21,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const GLTFLoader_js_1 = require("three/examples/jsm/loaders/GLTFLoader.js");
 const FBXLoader_js_1 = require("three/examples/jsm/loaders/FBXLoader.js");
+const LUTCubeLoader_js_1 = require("three/examples/jsm/loaders/LUTCubeLoader.js");
 const EXRLoader_1 = require("three/examples/jsm/loaders/EXRLoader");
 const DDSLoader_1 = require("three/examples/jsm/loaders/DDSLoader");
 const three_1 = require("three");
@@ -113,6 +114,16 @@ class Loader extends Utility.Eventemitter {
             extensions: ['glsl'],
             action: (_resource) => {
                 fileLoader.load(_resource.source, (_data) => {
+                    this.fileLoadEnd(_resource, _data);
+                });
+            }
+        });
+        //lutcube
+        const lUTCubeLoader = new LUTCubeLoader_js_1.LUTCubeLoader();
+        this.loaders.push({
+            extensions: ['cube'],
+            action: (_resource) => {
+                lUTCubeLoader.load(_resource.source, (_data) => {
                     this.fileLoadEnd(_resource, _data);
                 });
             }

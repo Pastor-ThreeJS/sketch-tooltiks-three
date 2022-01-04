@@ -1,4 +1,3 @@
-import * as THREE from 'three';
 import * as Utility from '../Utility';
 export default class Size extends Utility.Eventemitter {
     width: number;
@@ -6,9 +5,8 @@ export default class Size extends Utility.Eventemitter {
     aspect: number;
     viewportwidth: number;
     viewportheight: number;
-    constructor(canvas: HTMLElement, renderer: THREE.WebGLRenderer);
+    constructor(canvas: HTMLElement);
     private canvas;
-    private renderer;
     private resize;
     Init(): void;
     Destroy(): void;
