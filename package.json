@@ -1,6 +1,6 @@
 {
   "name": "sketch-tooltiks-three",
-  "version": "0.0.5",
+  "version": "0.0.9",
   "description": "Mini and powerful canvas engine tooltiks for creating App or Game.",
   "author": "lustianshun",
   "license": "ISC",
@@ -11,12 +11,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:Pastor-ThreeJS/sketch-three-tooltiks.git"
+    "url": "git@github.com:Pastor-ThreeJS/sketch-tooltiks-three.git"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/three": "^0.136.0",
-    "three": "^0.136.0",
+    "@types/three": "^0.131.0",
+    "three": "^0.131.0",
     "gulp": "^4.0.2",
     "gulp-bump": "^3.2.0",
     "@types/jest": "^24.0.25",
@@ -31,10 +31,10 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build && node ./script/build.js",
-    "compile": "gulp clean && tsc -d true -p ./src/lib/ && gulp upgrade_version",
-    "package": "gulp clean && tsc -d true -p ./src/lib/ && gulp upgrade_version && npm publish"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "compile": "node script/clean.js && tsc -d true -p ./src/lib/",
+    "package": "node ./script/clean.js && tsc -d true -p ./src/lib/ && gulp upgrade_version && npm publish"
   },
   "eslintConfig": {
     "extends": "react-app"

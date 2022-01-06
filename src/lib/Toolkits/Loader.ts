@@ -1,6 +1,7 @@
 
 import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js'
+import { LUTCubeLoader } from 'three/examples/jsm/loaders/LUTCubeLoader.js';
 import { EXRLoader } from "three/examples/jsm/loaders/EXRLoader";
 import { DDSLoader } from "three/examples/jsm/loaders/DDSLoader";
 import { FileLoader, TextureLoader, Texture } from 'three';
@@ -102,6 +103,17 @@ export default class Loader extends Utility.Eventemitter {
             extensions: ['glsl'],
             action: (_resource: { name: any, source: any, type: string }) => {
                 fileLoader.load(_resource.source, (_data) => {
+                    this.fileLoadEnd(_resource, _data)
+                })
+            }
+        })
+
+        //lutcube
+        const lUTCubeLoader = new LUTCubeLoader()
+        this.loaders.push({
+            extensions: ['cube'],
+            action: (_resource: { name: any, source: any, type: string }) => {
+                lUTCubeLoader.load(_resource.source, (_data) => {
                     this.fileLoadEnd(_resource, _data)
                 })
             }
